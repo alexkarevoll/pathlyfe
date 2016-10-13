@@ -23,18 +23,8 @@
 
       <button type="submit" class="subPath btn btn-warning btn-lg" id="pathButton">Add Blip</button>
 
-      // <script>
-      //   (function() {
-      //     var cx = '001069557781766465408:embqtd-fqlk';
-      //     var gcse = document.createElement('script');
-      //     gcse.type = 'text/javascript';
-      //     gcse.async = true;
-      //     gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-      //     var s = document.getElementsByTagName('script')[0];
-      //     s.parentNode.insertBefore(gcse, s);
-      //   })();
-      // </script>
-      // <gcse:search></gcse:search>
+      <input type="text" class="form-control " id="image-search-txt" placeholder="Image Search">
+      <button type="submit" class="subPath btn btn-info btn-sm" id="image-search-btn"> Images</button>
 
    </div>
    <div class="col-xs-2 col-md-2">
@@ -99,7 +89,6 @@ var $blipId = $('#blipId')
 var $pathBtn = $('#pathButton')
 var $myBody = $('body')
 
-
 $myBody.on('click', '.delete-btn', function(){
 
 var $self = $(this)
@@ -114,14 +103,12 @@ var $self = $(this)
   $.ajax(opts).done(cb)
 })
 
-
 $pathBtn.on('click', function(evt){
    evt.preventDefault();
    var $blipTitle = $('#blipTitle').val()
    var $description = $('#description').val()
    var $year = $('#blipYear').val()
    var $blipDrop = $('#blipDrop').val()
-
 
 var opts = {
   method: 'post',
@@ -165,5 +152,22 @@ var opts = {
 $.ajax(opts).done(cb)
 })
 
+// IMAGE SEARCH AJAX CALL ========================================
+var $imageSearchButton = $('#image-search-btn')
+
+$imageSearchButton.on('click', function(evt){
+  evt.preventDefault()
+  var imageSearchText = $('#image-search-txt')
+  console.log(imageSearchText.val())
+
+  var opts = {
+    method: 'get',
+    url: '/google/'+ imageSearchText.val(),
+    }
+    var cb = function(data){
+      console.log(data)
+    }
+    $.ajax(opts).done(cb)
+})
 
 </script>
