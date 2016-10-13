@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-=======
-# project_3
-
 # pathLyfe
 ### You're career is so much more than a resume
 _______
@@ -30,41 +25,62 @@ My name is Alex, I have a career in software development, but would like to comp
 My name is Bob, and I provide a free online resource to help burgeoning writers. I check pathLyfe to see how many people are actually using my resource to assist them in their paths towards becoming writers.
 
 _________
-# Technologies used
-- MongoDB
+## Technologies used
+- MongoDB / mlab
 - Express
+- node.js
 - RESTful API production
-- AJAX
-- MongoDB
-- Express
-- RESTful API production (   )
+- JSON
 - AJAX
 - Authentication using OAuth
 - Heroku
+- git/gitHub
 _______
-# Set up procedure
+## Set up procedure
 
-Working as a group, we used the above-mentioned technologies to create an application that has highly functioning back-end code so that it will allow a user to create, update, and delete resources of the application using authorization middleware.
+Working as a group of three, we used the above-mentioned technologies to create an application that has highly functioning back-end code that will allow a user to create, update, and delete resources in the application using authorization middleware.
 
-Our group delegated different pieces of the application to each other, so that we would be able to connect the pieces of code together for a working product. Using trello (linked below), we were able to track our progress throughout the project week.
+Our group delegated different pieces of the application to each other, so that we would be able to connect the pieces of code together for a working product using git and gitHub. Using trello (linked below), we were able to track our progress throughout the project week.
 
 https://trello.com/b/dkezkiRe/pathlyfe
-_________
-# Unsolved problems
-
-
 ________
-# Data Model
+## Data Model
+```javascript
 
+// User
+userSchema{
+  local: {
+    name: {type: String},
+    email : {type: String},
+    password: {type: String}
+  },
+  img: {type: String},
+  bio: {type: String},
+  paths: [{type: mongoose.Schema.Types.ObjectId, ref:'Path'}]
+}
+
+// Path
+pathSchema{
+  _by: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+  name: {type: String, required: true},
+  blips: [blipSchema]
+}
+
+blipSchema{
+  title : {type: String, required: true},
+  description: {type: String},
+  link: {type: String},
+  kind: {type: String},
+  year: {type: Number},
+  img: {type: String}
+ }
+```
 
 ________
 # Wireframe
-[!pathLyfe WF]
-https://github.com/sundiata88/project_3/blob/master/Project%203%20WireFrame.png
-
+![Imgur](http://i.imgur.com/3MTXglc.png)
 _______
-# More information
-
-
-(power point attached)
->>>>>>> f1bf66d3a85bd24e062eb7bda34801b8554c924d
+# Contributers
+|| [Troy C 😎](https://github.com/troycarson100)  ||
+[Sundiata T 😇](https://github.com/sundiata88)  ||
+[Alex K 😷](https://github.com/alexkarevoll)  ||
