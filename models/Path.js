@@ -6,8 +6,8 @@ var blipSchema = mongoose.Schema({
   description: {type: String},
   link: {type: String},
   kind: {type: String},
-  year: {type: Number}
-  // img: {type: String},
+  year: {type: Number},
+  img: {type: String}
   // duration: {type: Number},
   // tag: [{type: String}],
   // I think this number will be generated via a
