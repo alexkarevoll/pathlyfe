@@ -25,7 +25,7 @@ My name is Alex, I have a career in software development, but would like to comp
 My name is Bob, and I provide a free online resource to help burgeoning writers. I check pathLyfe to see how many people are actually using my resource to assist them in their paths towards becoming writers.
 
 _________
-# Technologies used
+## Technologies used
 - MongoDB / mlab
 - Express
 - node.js
@@ -36,19 +36,15 @@ _________
 - Heroku
 - git/gitHub
 _______
-# Set up procedure
+## Set up procedure
 
 Working as a group of three, we used the above-mentioned technologies to create an application that has highly functioning back-end code that will allow a user to create, update, and delete resources in the application using authorization middleware.
 
 Our group delegated different pieces of the application to each other, so that we would be able to connect the pieces of code together for a working product using git and gitHub. Using trello (linked below), we were able to track our progress throughout the project week.
 
 https://trello.com/b/dkezkiRe/pathlyfe
-_________
-# Unsolved problems
-
-
 ________
-# Data Model
+## Data Model
 ```javascript
 
 // User
@@ -85,6 +81,6 @@ ________
 ![Imgur](http://i.imgur.com/3MTXglc.png)
 _______
 # Contributers
-[Troy C](https://github.com/troycarson100) ||
-[Sundiata T](https://github.com/sundiata88) ||
-[Alex K](https://github.com/alexkarevoll)
+|| [Troy C 😎](https://github.com/troycarson100) ||
+[Sundiata T 😇](https://github.com/sundiata88) ||
+[Alex K 😷](https://github.com/alexkarevoll) ||
